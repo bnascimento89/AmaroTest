@@ -1,0 +1,21 @@
+costumer: &default
+  name: ~first_name
+  last_name: ~last_name
+  email: ~email_adress
+  phone: "11999998888"
+  birthdate: ~date_of_birth(rand(18..70))
+  password: "Amaro1234@"
+  confirmation_password: "Amaro1234@"
+
+existing:
+  <<: *default
+  email: "brucn89@gmail.com"
+
+non_existent_email:
+  <<: *default
+  email: "brucn90@gmail.com"
+
+incorrect_password:
+  <<: *default
+  email: "brucn89@gmail.com"
+  password: "12345678"
