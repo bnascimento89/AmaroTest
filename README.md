@@ -17,4 +17,5 @@ Amaro Test, using the BDD framework Cucumber to provide documentation to automat
             $ bundle install
 
 ### Usage
-            $ cucumber features -t [tag]
+            $ cucumber -t @login to login feature
+            $ cucumber 0t @register to register feature
