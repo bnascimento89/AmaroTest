@@ -1,6 +1,6 @@
 class Costumer
     include DataMagic
-    attr_accessor :name, :last_name, :email, :password, :confirmation_password, :cpf
+    attr_accessor :name, :last_name, :email, :cpf, :phone, :birthdate, :password, :password_confirmation
 
     def initialize create_type
       obj = data_for "costumers/#{create_type.to_s}"
@@ -11,6 +11,6 @@ class Costumer
       @phone = obj["phone"]
       @birthdate = obj["birthdate"]
       @password = obj["password"]
-      @confirmation_password = obj["confirmation_password"]
+      @password_confirmation = obj["password_confirmation"]
     end
 end

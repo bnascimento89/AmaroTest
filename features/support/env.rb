@@ -55,8 +55,18 @@ def setup_for_firefox
   Capybara.run_server = false
   Capybara.default_driver = :selenium
   Capybara.page.driver.browser.manage.window.maximize
+  Capybara.page.driver.browser.manage.delete_all_cookies
   Capybara.reset_session!
 end
-setup_for_firefox
+
+def setup_browser(browser)
+  case browser.to_sym
+  when :chrome then setup_for_chrome
+  else setup_for_firefox
+  end
+end
+
+browser = ['chrome', 'firefox'].include?(ENV['browser']) ? ENV['browser'].to_sym : :firefox
+setup_browser(ENV.fetch('browser', :firefox))
 
 AMARO_URL = 'https://amaro.com'

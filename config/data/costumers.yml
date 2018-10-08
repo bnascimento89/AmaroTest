@@ -1,11 +1,11 @@
-costumer: &default
+customer: &default
   name: ~first_name
   last_name: ~last_name
-  email: ~email_adress
+  email: ~email_address
   phone: "11999998888"
-  birthdate: ~date_of_birth(rand(18..70))
+  birthdate: "19011989"
   password: "Amaro1234@"
-  confirmation_password: "Amaro1234@"
+  password_confirmation: "Amaro1234@"
 
 existing:
   <<: *default

@@ -8,10 +8,12 @@ end
 Given("fill the form with all requested datas") do
   @costumer = costumer('new customer')
   @register = Register.new
-  @register.fill_register()
+  @register.fill_register(@costumer)
   sleep(30)
 end
 
 Then("the costumer should have an account created") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @account_page = AccountPage.new
+  expect(@account_page).to be_displayed
+  expect(@register).not_to be_displayed
 end
