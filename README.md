@@ -2,6 +2,8 @@
 
 Amaro Test, using the BDD framework Cucumber to provide documentation to automated tests.
 
+$ git clone https://github.com/bnascimento89/AmaroTest.git
+
 ## Dependencies
 
 * Ruby 2.5.0
