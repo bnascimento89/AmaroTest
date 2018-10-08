@@ -13,6 +13,7 @@ end
 
 Then("the costumer should have an account created") do
   @account_page = AccountPage.new
+  sleep(2)
   expect(@account_page).to be_displayed
   expect(@register).not_to be_displayed
 end
