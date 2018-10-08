@@ -32,9 +32,11 @@ Given("fill the form with an incorrect password") do
 end
 
 Then("the customer should see an error email message") do
+  sleep(2)
   expect(@identify).to have_non_existent_email
 end
 
 Then("the customer should see an error password message") do
+  sleep(2)
   expect(@login).to have_incorrect_password
 end
